@@ -1,0 +1,49 @@
+'use client';
+import * as React from 'react';
+import { motion, useInView } from 'motion/react';
+import { cn } from '@/lib/utils';
+
+function HighlightText({
+  text,
+  className,
+  inView = false,
+  inViewMargin = '0px',
+  inViewOnce = true,
+  transition = { duration: 2, ease: 'easeInOut' },
+  ...props
+}) {
+  const localRef = React.useRef(null);
+  const inViewResult = useInView(localRef, {
+    once: inViewOnce,
+    margin: inViewMargin,
+  });
+
+  const isInView = !inView || inViewResult;
+
+  return (
+    <motion.span
+      ref={localRef}
+      data-slot="highlight-text"
+      initial={{
+        backgroundSize: '0% 100%',
+      }}
+      animate={isInView ? { backgroundSize: '100% 100%' } : undefined}
+      transition={transition}
+      style={{
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'left center',
+        display: 'inline',
+      }}
+      className={cn(
+        `relative inline-block px-2 py-1 rounded-lg bg-gradient-to-r 
+         from-blue-100 to-purple-100 dark:from-blue-500 dark:to-purple-500`,
+        className
+      )}
+      {...props}
+    >
+      {text}
+    </motion.span>
+  );
+}
+
+export { HighlightText };
