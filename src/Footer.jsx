@@ -13,7 +13,7 @@ export default function Footer() {
         <div>
           <h2 className="text-white text-lg font-semibold mb-3">SyedAariz.dev</h2>
           <p className="text-sm mb-6">
-            A collection of projects and ideas — blending AI, data, and design.
+            A collection of projects and ideas that blends AI, data, and web developement.
           </p>
           <div className="flex space-x-4 text-xl">
             <a href="https://www.instagram.com/aariz._/" target="_blank" className="hover:text-white"><FaInstagram /></a>
