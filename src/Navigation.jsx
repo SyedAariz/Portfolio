@@ -37,16 +37,16 @@ export default function Navigation() {
         <div className="w-full px-6 py-3 grid grid-cols-[auto_1fr_auto] items-center">
 
           {/* Logo */}
-          <h1 className="text-[1.6rem] font-semibold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+          <h1 className="text-[1.6rem] font-semibold text-white">
             Syed.
           </h1>
 
           {/* Links */}
-          <ul className="flex justify-center space-x-10 text-[1.1rem] font-semibold text-gray-200 tracking-wide">
+          <ul className="flex justify-center space-x-10 text-[1.1rem] font-semibold text-white tracking-wide">
             {["Home", "About", "Projects", "Experiences"].map((item) => (
               <li key={item}>
                 <a
-                  className="hover:text-purple-400 transition-colors"
+                  className="text-white hover:text-gray-300 transition-colors !text-white !no-underline"
                   href={`#${item.toLowerCase()}`}
                 >
                   {item}

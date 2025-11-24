@@ -11,7 +11,7 @@ export default function Footer() {
 
         {/* Logo + Description */}
         <div>
-          <h2 className="text-white text-lg font-semibold mb-3">SyedAariz.dev</h2>
+          <h2 className="text-white text-lg font-semibold mb-3">Syed.</h2>
           <p className="text-sm mb-6">
             A collection of projects and ideas that blends AI, data, and web developement.
           </p>
@@ -26,19 +26,19 @@ export default function Footer() {
         <div>
           <h3 className="text-white text-sm font-semibold mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#experiences" className="hover:text-white">Experience</a></li>
-            <li><a href="#projects" className="hover:text-white">Projects</a></li>
+            <li><a href="#experiences" className="hover:text-gray-300">Experience</a></li>
+            <li><a href="#projects" className="hover:text-gray-300">Projects</a></li>
             <li>
               <a
                 href={ResumePDF}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white"
+                className="hover:text-gray-300"
               >
                 Resume
               </a>
             </li>
-            <li><a href="#about" className="hover:text-white">About Me</a></li>
+            <li><a href="#about" className="hover:text-gray-300">About Me</a></li>
           </ul>
         </div>
 
