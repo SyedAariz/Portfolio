@@ -38,7 +38,7 @@ export default function Footer() {
                 Resume
               </a>
             </li>
-            <li><a href="#About Me" className="hover:text-white">About Me</a></li>
+            <li><a href="#about" className="hover:text-white">About Me</a></li>
           </ul>
         </div>
 

@@ -452,35 +452,39 @@ function App() {
                   text: "A full-stack web app that lets users enter an address or upload data to instantly view Census insights for that area. Built with Flask, React, and Google Maps API for real-time geospatial analytics.",
                   img: Demographic,
                   link: "https://demographicexplorer.org",
+                  github: "https://github.com/SyedAariz/Health-Demographic"
                 },
                 {
                   title: "DSA Website",
                   text: "Developed the UH Dialogue Students Association website using React, Tailwind CSS, and Framer Motion. Showcases events, club initiatives, and team info with responsive design.",
                   img: DSAImage,
                   link: "https://www.uhdsa.org",
+                  github: "https://github.com/yaozay/dsa-website"
                 },
               ].map((proj, i) => (
                 <motion.div key={i} variants={fadeInUp}>
                   <CardContainer className="inter-var" containerClassName="py-6">
-                    <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-violet-500/[0.15] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[28rem] h-auto rounded-2xl p-6 border transition-all duration-300 hover:-translate-y-1">
+                    <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-violet-500/[0.15] 
+                      dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[28rem] h-auto rounded-2xl p-6 border transition-all duration-300 hover:-translate-y-1">
+
                       <CardItem translateZ="50" className="text-2xl font-semibold text-neutral-800 dark:text-white tracking-tight">
                         {proj.title}
                       </CardItem>
+
                       <CardItem translateZ="100" className="w-full mt-5">
                         <img src={proj.img} className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl transition-all duration-300" alt={proj.title} />
                       </CardItem>
+
                       <CardItem as="p" translateZ="60" className="text-neutral-600 dark:text-neutral-300 text-[15px] mt-4 leading-relaxed">
                         {proj.text}
                       </CardItem>
+
                       <div className="flex justify-between items-center mt-8">
                         <CardItem translateZ={20} as="a" href={proj.link} target="_blank" className="px-4 py-2 rounded-xl text-sm font-medium text-violet-400 hover:text-violet-300 transition">
                           View Project →
                         </CardItem>
-                        <a
-                          href="https://github.com/yaozay/dsa-website"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
+
+                        <a href={proj.github} target="_blank" rel="noopener noreferrer">
                           <CardItem
                             translateZ={20}
                             as="button"
@@ -489,13 +493,13 @@ function App() {
                             Source Code
                           </CardItem>
                         </a>
-                        
-                        
                       </div>
+
                     </CardBody>
                   </CardContainer>
                 </motion.div>
               ))}
+
             </motion.div>
           </motion.div>
 

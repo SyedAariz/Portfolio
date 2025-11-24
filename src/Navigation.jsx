@@ -38,7 +38,7 @@ export default function Navigation() {
 
           {/* Logo */}
           <h1 className="text-[1.6rem] font-semibold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-            Aariz.dev
+            Syed.
           </h1>
 
           {/* Links */}
